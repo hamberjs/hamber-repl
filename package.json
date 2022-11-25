@@ -1,0 +1,42 @@
+{
+  "name": "@hamberjs/hamber-repl",
+  "version": "0.0.5",
+  "description": "The <Repl> component used on the Hamber website",
+  "main": "src/Repl.hamber",
+  "hamber": "src/Repl.hamber",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -cw",
+    "lint": "eslint src/**.hamber src/**.js"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "eslint-plugin-hamber3": "^0.4.4",
+    "port-authority": "^1.0.5",
+    "puppeteer": "^1.9.0",
+    "rollup": "^1.1.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-hamber": "^5.0.1",
+    "sirv": "^0.2.2",
+    "hamber": "^3.0.0-beta.21",
+    "tap-diff": "^0.1.1",
+    "tap-dot": "^2.0.0",
+    "tape-modern": "^1.1.1"
+  },
+  "repository": "https://github.com/hamberjs/hamber-repl",
+  "author": "Rich Harris",
+  "license": "LIL",
+  "keywords": [
+    "hamber"
+  ],
+  "files": [
+    "src",
+    "index.mjs",
+    "index.js"
+  ],
+  "dependencies": {
+    "codemirror": "^5.45.0",
+    "yootils": "0.0.15"
+  }
+}
