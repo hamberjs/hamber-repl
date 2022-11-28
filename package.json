@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "eslint": "^5.12.1",
-    "eslint-plugin-hamber3": "^0.4.4"
+    "eslint-plugin-hamber3": "^0.4.4",
+    "hamber": "^3.0.0-beta.24"
   },
   "repository": "https://github.com/hamberjs/hamber-repl",
   "author": "NKDuy",
@@ -27,6 +28,7 @@
   ],
   "dependencies": {
     "codemirror": "^5.45.0",
+    "sourcemap-codec": "^1.4.4",
     "yootils": "0.0.15"
   }
 }
