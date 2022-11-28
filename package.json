@@ -1,6 +1,6 @@
 {
   "name": "@hamberjs/hamber-repl",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "The <Repl> component used on the Hamber website",
   "main": "src/Repl.hamber",
   "hamber": "src/Repl.hamber",
@@ -13,7 +13,8 @@
   "devDependencies": {
     "eslint": "^5.12.1",
     "eslint-plugin-hamber3": "^0.4.4",
-    "hamber": "^3.0.0-beta.24"
+    "hamber": "^3.0.0",
+    "yootils": "0.0.15"
   },
   "repository": "https://github.com/hamberjs/hamber-repl",
   "author": "NKDuy",
@@ -28,7 +29,6 @@
   ],
   "dependencies": {
     "codemirror": "^5.45.0",
-    "sourcemap-codec": "^1.4.4",
-    "yootils": "0.0.15"
+    "sourcemap-codec": "^1.4.4"
   }
 }
