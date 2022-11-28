@@ -75,6 +75,7 @@ function worker_fn() {
 				external: id => {
 					if (id[0] === '.') return false;
 					if (is_hamber_module(id)) return false;
+					if (id.startsWith('http://')) return false;
 					if (id.startsWith('https://')) return false;
 					return true;
 				},
@@ -84,7 +85,7 @@ function worker_fn() {
 						if (importee === `hamber`) return `${hamberUrl}/index.mjs`;
 						if (importee.startsWith(`hamber/`)) return `${hamberUrl}/${importee.slice(7)}.mjs`;
 
-						if (importer && importer.startsWith(`https://`)) {
+						if (importer && (importer.startsWith(`https://`) || (importer.startsWith(`http://`)))) {
 							return new URL(`${importee}.mjs`, importer).href;
 						}
 
@@ -95,7 +96,7 @@ function worker_fn() {
 						throw new Error(`Could not resolve "${importee}" from "${importer}"`);
 					},
 					load(id) {
-						if (id.startsWith(`https://`)) return fetch_if_uncached(id);
+						if (id.startsWith(`https://`) || id.startsWith(`http://`)) return fetch_if_uncached(id);
 						if (id in lookup) return lookup[id].source;
 					},
 					transform(code, id) {
