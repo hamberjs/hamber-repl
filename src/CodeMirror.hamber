@@ -124,13 +124,13 @@
 		if (_CodeMirror) {
 			CodeMirror = _CodeMirror;
 			createEditor(mode || 'hamber').then(() => {
-				editor.setValue(code || '');
+				if (editor) editor.setValue(code || '');
 			});
 		} else {
 			codemirror_promise.then(async mod => {
 				CodeMirror = mod.default;
 				await createEditor(mode || 'hamber');
-				editor.setValue(code || '');
+				if (editor) editor.setValue(code || '');
 			});
 		}
 
